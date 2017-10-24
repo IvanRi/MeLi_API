@@ -23,7 +23,6 @@ function searchData(text){
 		dataType:'JSON',
 		success:function(data){
 			var objData = data.results
-				debugger
 			for (var i = 0; i < elementPag; i++){
 				var priceF = priceFormat(objData[i].price)
 				var newItem = new Item(objData[i].title , priceF , objData[i].address.state_name , objData[i].id , objData[i].shipping.free_shipping)
