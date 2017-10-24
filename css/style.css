@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+* {
+  font-family: "Lato", sans-serif; }
+
+body {
+  background-color: #dddddd;
+  margin: 0; }
+  body .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 10px; }
+  body nav {
+    background-color: #f6fc00; }
+    body nav div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      body nav div .search_group {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+        width: 100%; }
+      body nav div input {
+        width: 100%;
+        font-size: 15px;
+        padding: 7px 20px 10px 20px;
+        border-radius: 4px 0 0 4px;
+        border: 0px;
+        background-color: rgba(255, 255, 255, 0.6); }
+        body nav div input:focus {
+          outline: none; }
+      body nav div .logo_img {
+        height: 35px;
+        margin: 0 15px 0 0px; }
+      body nav div .search_img {
+        background-color: #e2e2e2;
+        height: 15px;
+        padding: 10px 15px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer; }
+      body nav div .favoriteButton {
+        cursor: pointer;
+        margin: 0 10px;
+        font-size: 35px;
+        color: #d60000; }
+  body main .guide {
+    margin: 20px 0; }
+  body main .container_results {
+    background-color: white;
+    margin: 20px 0px; }
+    body main .container_results .container_item .item {
+      padding: 15px 0;
+      margin: 0 15px;
+      border-bottom: 2px solid whitesmoke;
+      display: flex; }
+      body main .container_results .container_item .item .item_img {
+        width: 160px;
+        height: 160px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 4px; }
+      body main .container_results .container_item .item .item_attr {
+        padding: 0 20px;
+        width: 75%; }
+        body main .container_results .container_item .item .item_attr .price_location {
+          width: 100%;
+          display: flex;
+          justify-content: space-between; }
+          body main .container_results .container_item .item .item_attr .price_location div h4 {
+            font-size: 30px;
+            margin: 0; }
+          body main .container_results .container_item .item .item_attr .price_location div h5 {
+            font-weight: 300; }
+          body main .container_results .container_item .item .item_attr .price_location .favoriteIcon {
+            font-size: 35px;
+            cursor: pointer;
+            color: #d60000;
+            display: none; }
+
+/*# sourceMappingURL=style.css.map */

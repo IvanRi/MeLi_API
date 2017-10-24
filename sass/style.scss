@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+$fontML: "Lato" , sans-serif;
+$colorBack: #f6fc00;
+$backResultados: #dddddd;
+$favoriteColor: #d60000;
+$backgroundInput: rgba(255,255,255,0.6);
+
+*{
+	font-family:$fontML;
+}
+
+body{
+	background-color:$backResultados;
+	margin:0;
+	.container{
+		max-width: 1000px;
+		margin: auto;
+		padding:0 10px;
+	}
+	//NAV CUSTOM-------------------------------
+	nav{
+		background-color:$colorBack ;
+		div{
+			display: flex;
+			align-items:center;
+			justify-content: space-between;
+			.search_group{
+				display: flex;
+				align-items: center;
+				margin: 8px 0;
+				width: 100%;
+			}
+			input{
+				width: 100%;
+				font-size: 15px;
+				padding:7px 20px 10px 20px;
+				border-radius:4px 0 0 4px;
+				border:0px;
+				background-color:$backgroundInput;
+
+				&:focus{
+					outline: none;
+				}
+			}
+			.logo_img{
+				height: 35px;
+				margin: 0 15px 0 0px;
+			}
+			.search_img{
+				background-color:#e2e2e2	;
+				height: 15px;
+				padding: 10px 15px;
+				border-radius: 0 4px 4px 0;
+				cursor: pointer;
+			}
+			.favoriteButton{
+				cursor: pointer;
+				margin:0 10px;
+				font-size: 35px;
+				color:$favoriteColor;
+			}
+		}
+	}
+	//END NAV CUSTOM--------------------------------------
+	//MAIN CUSTOM-----------------------------------------
+	main{
+		.guide{
+			margin: 20px 0;
+		}
+		.container_results{
+			background-color:white;
+			margin: 20px 0px;
+			.container_item{
+				.item{
+					padding:15px 0;
+					margin: 0 15px;
+					border-bottom:2px solid whitesmoke;
+					display: flex;
+					.item_img{
+						width:160px;
+						height:160px;
+						background-size: cover;
+				    background-position: center;
+				    border-radius:4px;
+					}
+					.item_attr{
+						padding: 0 20px;
+						width: 75%;
+						.price_location{
+							width: 100%;
+							display: flex;
+							justify-content: space-between;
+							div{
+								h4{
+									font-size: 30px;
+									margin:0;
+								}
+								h5{
+									font-weight: 300;
+								}
+							}				
+							.favoriteIcon{
+								font-size: 35px;
+								cursor:pointer;
+								color:$favoriteColor;
+								display: none;
+							}
+						}
+					}
+				}				
+			}
+		}
+	}
+	//END MAIN CUSTOM---------------------------------------
+}
