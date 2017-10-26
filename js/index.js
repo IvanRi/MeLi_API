@@ -5,6 +5,7 @@ function init(){
 }
 
 function textValue(){
+	event.preventDefault();
 	var text = $('#textsearch').val();
  	searchData(text)
 }
@@ -16,12 +17,12 @@ const elementPag = 10
 var itemArray = []
 
 function searchData(text){
-	clearResults()
 	$.ajax({
 		url:`https://api.mercadolibre.com/sites/MLA/search?q=${text}`,
 		type: 'get',
 		dataType:'JSON',
 		success:function(data){
+			clearResults()
 			var objData = data.results
 			for (var i = 0; i < elementPag; i++){
 				var priceF = priceFormat(objData[i].price)
@@ -37,6 +38,7 @@ function searchData(text){
 		}
 	})	
 }
+
 //FIND IMAGEN THUMBNAIL
 
 var thumbnailArray = []
@@ -57,6 +59,7 @@ function findImg(array){
 			complete: function(){
 				if(thumbnailArray.length == 10){
 					viewResults(itemArray , thumbnailArray)
+					localStorage.setItem(0,JSON.stringify(itemArray))
 				}
 			}
 		})
@@ -89,7 +92,12 @@ function viewResults(arrayR , arrayT){
 							</div>
 						</div>
 					</article>`
-				)						
+				)
+				for (var p = 100; p < idObjFav; p++) {
+					if(localStorage.getItem(p) == arrayR[i].id){
+						$(`#f${arrayR[i].id}`).addClass('ion-heart')						
+					}
+				}
 			}
 		}
 	}

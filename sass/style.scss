@@ -3,7 +3,7 @@
 $fontML: "Lato" , sans-serif;
 $colorBack: #f6fc00;
 $backResultados: #dddddd;
-$favoriteColor: #d60000;
+$favoriteColor: rgba(255, 0, 0 , 0.6);
 $backgroundInput: rgba(255,255,255,0.6);
 
 *{
@@ -17,6 +17,7 @@ body{
 		max-width: 1000px;
 		margin: auto;
 		padding:0 10px;
+		box-sizing:border-box;
 	}
 	//NAV CUSTOM-------------------------------
 	nav{
@@ -47,18 +48,25 @@ body{
 				height: 35px;
 				margin: 0 15px 0 0px;
 			}
-			.search_img{
-				background-color:#e2e2e2	;
-				height: 15px;
-				padding: 10px 15px;
-				border-radius: 0 4px 4px 0;
-				cursor: pointer;
+			#search_img{
+				padding:0;
+				margin: 0;
+				.search_img{
+					background-color:#e2e2e2;
+					height: 15px;
+					padding: 7px 15px;
+					border-radius: 0 4px 4px 0;
+					cursor: pointer;
+				}				
 			}
 			.favoriteButton{
 				cursor: pointer;
 				margin:0 10px;
-				font-size: 35px;
+				font-size: 30px;
+				padding: 0 6px;
+				border-radius:50%;
 				color:$favoriteColor;
+				background-color:whitesmoke;
 			}
 		}
 	}
@@ -105,6 +113,7 @@ body{
 								cursor:pointer;
 								color:$favoriteColor;
 								display: none;
+								height:40px;
 							}
 						}
 					}
